@@ -24,6 +24,9 @@
     <ClCompile Include="Common\Graphics\Texture\Texture2D.cpp" />
     <ClCompile Include="Common\Graphics\VAO\BasicVAO.cpp" />
     <ClCompile Include="Common\Graphics\VAO\Texture2DVAO.cpp" />
+    <ClCompile Include="Common\Physics2D\AABB.cpp" />
+    <ClCompile Include="Common\Physics2D\ConvexShape.cpp" />
+    <ClCompile Include="Common\Physics2D\Physics2D.cpp" />
     <ClCompile Include="Display\Display.cpp" />
     <ClCompile Include="Map.cpp" />
     <ClCompile Include="Player.cpp" />
@@ -41,6 +44,9 @@
     <ClInclude Include="Common\Graphics\Shader\Shader.h" />
     <ClInclude Include="Common\Graphics\Texture\Texture2D.h" />
     <ClInclude Include="Common\Graphics\VAO\VAO.h" />
+    <ClInclude Include="Common\Physics2D\AABB.h" />
+    <ClInclude Include="Common\Physics2D\ConvexShape.h" />
+    <ClInclude Include="Common\Physics2D\Physics2D.h" />
     <ClInclude Include="Common\Types.h" />
     <ClInclude Include="Common\Graphics\Vertex\Vertex.h" />
     <ClInclude Include="Display\Display.h" />

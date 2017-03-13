@@ -1,4 +1,5 @@
 #include "Physics2D.h"
+#include "ConvexShape.h"
 
 /*
 EVAL DRAW COLLISON ALGORITHM
@@ -77,8 +78,8 @@ boolean tuPhysics2D_s::CollisionDetect_AABB ( tuAABB r1, tuAABB r2 ) {
 void tuPhysics2D_s::CollisionResolve_AABB ( const tuAABB & r1, const glm::vec2 & r1Vel, 
 										    const tuAABB & r2, const glm::vec2 & r2Vel ) {
 
-
 }
 
-
+void tuPhysics2D_s::SATCollision ( tuConvexShape s1, tuConvexShape s2, CollisionInfo_t colInfo ) {
+	colInfo.pos = glm::vec2();
 }

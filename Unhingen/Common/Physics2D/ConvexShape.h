@@ -8,11 +8,12 @@ Represent a convex shape as a set of points with some validations performed on t
 */
 class tuConvexShape {
 private:
-	std::vector<glm::vec2> points;
+	std::vector<glm::vec2> points = std::vector<glm::vec2>();
 
 	boolean IsConvex();
+	boolean IsLeftOfLine( glm::vec2 S, glm::vec2 P1, glm::vec2 P2 );
 
 public:
-	tuConvexShape ( std::vector<glm::vec2> points );
+	tuConvexShape ( const std::vector<glm::vec2> &points );
 	~tuConvexShape ();	
 };

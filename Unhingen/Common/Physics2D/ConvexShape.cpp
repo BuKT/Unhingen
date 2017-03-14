@@ -8,7 +8,7 @@
 } ConvexEx;*/
 
 tuConvexShape::tuConvexShape ( const std::vector<glm::vec2> &points ) {
-	if ( false /*IsConvex(points)*/ ) { this->points = points; }
+	if ( IsConvex(points) ) { this->points = points; }
 	else { throw ConvexEx; }
 }
 
@@ -37,21 +37,29 @@ boolean tuConvexShape::IsConvex( const std::vector<glm::vec2> &points ) {
 	std::vector<glm::vec2> P = std::vector<glm::vec2>();
 
 	int i = 0;
-	while (endpoint != this->points[0]) {
-		P[i] = pointOnHull;
+	do {
+		P.push_back( pointOnHull );
 		endpoint = points[0];
 		for (int j = 1; j < points.size(); j++) {
-			if (endpoint == pointOnHull || IsLeftOfLine( points[j], P[i], endpoint )) {
+			if ( endpoint == pointOnHull || IsLeftOfLine(points[j], P[i], endpoint) ) {
 				endpoint = points[j];
+			}
+			else {
+				return false;
 			}
 		}
 		i++;
 		pointOnHull = endpoint;
-	}
+	} while (endpoint != points[0]);
 
-	return boolean();
+	return true;
 }
 
 boolean tuConvexShape::IsLeftOfLine(glm::vec2 S, glm::vec2 P1, glm::vec2 P2) {
-	return boolean();
+	// Check if S is on the left of the line P1P2
+	// Calculate the determinant of P1 P2
+	// where 0 is on the line, -1 is on the left and +1 is on the right
+	int side = (P2.y - P1.x) * (S.y - P1.y) - (P2.y - P1.y) * (S.x - P1.x);
+	if ( side < 0 ) return true;
+	return false;
 }

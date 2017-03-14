@@ -12,7 +12,7 @@ void Tests::TestConvexShape() {
 	p3.x = 2; p3.y = 2;
 	p4.x = 2; p4.y = 1;
 
-	points = { p1, p2, p3 /*, p4*/ };
+	points = { p1, p2, p3 ,p4 };
 
 	try {
 		tuConvexShape square = tuConvexShape( points );

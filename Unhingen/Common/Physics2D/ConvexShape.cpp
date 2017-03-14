@@ -1,10 +1,12 @@
 #include "ConvexShape.h"
+#include "..\..\System\Error.h"
 
 tuConvexShape::tuConvexShape ( const std::vector<glm::vec2> &points ) {
-	this->points = points;
+	if ( IsConvex(points) ) { this->points = points; }
+	else { err::ErrMsg("Error: Points given do not form a convex shape"); return; }
 }
 
-boolean tuConvexShape::IsConvex() {
+boolean tuConvexShape::IsConvex( const std::vector<glm::vec2> &points ) {
 	// Check if the points specified form a convex shape  
 	// https://en.wikipedia.org/wiki/Gift_wrapping_algorithm - jarvis march in 2D cases
 	// Assuming points are in counte-clockwise order the moment the non-initial polar angle makes
@@ -41,5 +43,9 @@ boolean tuConvexShape::IsConvex() {
 		pointOnHull = endpoint;
 	}
 
+	return boolean();
+}
+
+boolean tuConvexShape::IsLeftOfLine(glm::vec2 S, glm::vec2 P1, glm::vec2 P2) {
 	return boolean();
 }

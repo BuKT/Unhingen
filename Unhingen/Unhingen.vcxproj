@@ -31,6 +31,7 @@
     <ClCompile Include="Map.cpp" />
     <ClCompile Include="Player.cpp" />
     <ClCompile Include="Test.cpp" />
+    <ClCompile Include="Test\Tests.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Common\Graphics\Camera\Camera.h" />

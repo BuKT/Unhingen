@@ -14,6 +14,7 @@
 #include "Common\Graphics\Camera\PerspectiveCamera.h"
 #include "Map.h"
 #include "Utils\IO.h"
+#include "Test\Tests.h"
 
 /*
  * "Unhingen" is a TEAM UNHINGED project
@@ -38,6 +39,11 @@ typedef struct Player_t {
 } Player;
 
 int main ( int argc, char *argv[] ) {
+
+	// run tests
+	RunTests();
+
+
 	u_int startTime = SDL_GetTicks();
 
 	tuDisplay win( WINDOW_WIDTH, WINDOW_HEIGHT, "Test Window" );

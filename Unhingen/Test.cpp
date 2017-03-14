@@ -41,8 +41,8 @@ typedef struct Player_t {
 int main ( int argc, char *argv[] ) {
 
 	// run tests
-	RunTests();
-
+	Tests::RunTests();
+	
 
 	u_int startTime = SDL_GetTicks();
 

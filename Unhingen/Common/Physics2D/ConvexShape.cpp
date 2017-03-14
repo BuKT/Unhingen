@@ -1,9 +1,15 @@
 #include "ConvexShape.h"
 #include "..\..\System\Error.h"
 
+/*static class NonConvexShapeException : public std::exception {
+	virtual const char* what() const throw() {
+		return "Points do not form convex shape";
+	}
+} ConvexEx;*/
+
 tuConvexShape::tuConvexShape ( const std::vector<glm::vec2> &points ) {
-	if ( IsConvex(points) ) { this->points = points; }
-	else { err::ErrMsg("Error: Points given do not form a convex shape"); return; }
+	if ( false /*IsConvex(points)*/ ) { this->points = points; }
+	else { throw ConvexEx; }
 }
 
 boolean tuConvexShape::IsConvex( const std::vector<glm::vec2> &points ) {

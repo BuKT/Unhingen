@@ -19,6 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Common\Game\Sprite\Sprite.cpp" />
     <ClCompile Include="Common\Graphics\Mesh.cpp" />
     <ClCompile Include="Common\Graphics\Shader\Shader.cpp" />
     <ClCompile Include="Common\Graphics\Texture\Texture2D.cpp" />
@@ -28,13 +29,16 @@
     <ClCompile Include="Common\Physics2D\ConvexShape.cpp" />
     <ClCompile Include="Common\Physics2D\Physics2D.cpp" />
     <ClCompile Include="Display\Display.cpp" />
+    <ClCompile Include="Game\Entities\Player\Player.cpp" />
+    <ClCompile Include="Game\Main.cpp" />
     <ClCompile Include="Map.cpp" />
-    <ClCompile Include="Player.cpp" />
     <ClCompile Include="Test.cpp" />
     <ClCompile Include="Test\Tests.cpp" />
     <ClCompile Include="Test\Tests.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Common\Game\Entity\Entity.h" />
+    <ClInclude Include="Common\Game\Sprite\Sprite.h" />
     <ClInclude Include="Common\Graphics\Camera\Camera.h" />
     <ClInclude Include="Common\Graphics\Camera\OrthographicCamera.h" />
     <ClInclude Include="Common\Graphics\Camera\PerspectiveCamera.h" />
@@ -46,14 +50,15 @@
     <ClInclude Include="Common\Graphics\Shader\Shader.h" />
     <ClInclude Include="Common\Graphics\Texture\Texture2D.h" />
     <ClInclude Include="Common\Graphics\VAO\VAO.h" />
+    <ClInclude Include="Common\Includes.h" />
     <ClInclude Include="Common\Physics2D\AABB.h" />
     <ClInclude Include="Common\Physics2D\ConvexShape.h" />
     <ClInclude Include="Common\Physics2D\Physics2D.h" />
     <ClInclude Include="Common\Types.h" />
     <ClInclude Include="Common\Graphics\Vertex\Vertex.h" />
     <ClInclude Include="Display\Display.h" />
+    <ClInclude Include="Game\Entities\Player\Player.h" />
     <ClInclude Include="Map.h" />
-    <ClInclude Include="Player.h" />
     <ClInclude Include="System\Error.h" />
     <ClInclude Include="System\Out.h" />
     <ClInclude Include="Utils\IO.h" />

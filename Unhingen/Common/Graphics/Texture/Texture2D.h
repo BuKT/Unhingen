@@ -6,6 +6,7 @@
 
 class tuTex2D {
 	public:
+		tuTex2D () {};
 		tuTex2D ( const std::string& fileName );
 		void Bind ();
 		void Unbind ();

@@ -1,8 +1,21 @@
 #pragma once
-#include "../Common/Graphics/Renderable/Renderable.h"
+#include "GL/glew.h"
 #include "../Common/Game/Entity/Entity.h"
 
-// Player class, implement the tu_Entity and tu_Renderable interfaces
-class Player : tu_Entity,tu_Renderable {
+// Player class, implement the tu_Entity
+class Player : public tuEntity {
+public:
+	virtual void Init() override;
 
+	virtual void Update() override;
+
+	virtual void Render() override;
+	
+	inline void SetX( float x ) { pos.x = (GLfloat)x; }
+	inline void SetY( float y ) { pos.y = (GLfloat)y; }
+	inline float GetX() { return pos.x; }
+	inline float GetY() { return pos.y; }
+
+private:
+	glm::vec2 pos;
 };

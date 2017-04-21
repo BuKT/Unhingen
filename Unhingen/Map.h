@@ -19,6 +19,7 @@ class Map {
 		glm::vec2 viewport;
 
 	public:
+		Map() {};
 		Map ( u_byte width, u_byte height, u_int *map );
 		~Map ();
 

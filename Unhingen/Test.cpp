@@ -38,7 +38,8 @@ typedef struct Player_t {
 	glm::vec2 size;
 } Player;
 
-int main ( int argc, char *argv[] ) {
+
+int main_1 ( int argc, char *argv[] ) {
 
 	// run tests
 	//Tests::RunTests();

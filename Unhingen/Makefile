@@ -1,15 +1,29 @@
-IDIR =./Include
-CC=gcc
-CFLAGS=-I$(IDIR)
+#The SRC dirs
+SRSC=
 
-ODIR=obj
-LDIR=../Lib
+#Linker dirs (Lib)
+LNKDIR=./Lib
 
-LIBS=-lm
+#Linker flag
+LNKFLAGS=-l$(LNKDIR)
 
-# I need to figure out what the dependencies are,
-# that is I need to list all the header files I think?
-_DEPS = # all header files 
-DEPS = $(patsubst %,%(IDIR)/%,$(_DEPS))
+#inlude dir
+INCDIR=./Inlcude
 
-unhingenmake: 
+#include flags
+INCFLAGS=
+
+#compiler
+CC=g++
+
+#compiler flags
+CFLAGS=-w
+
+#OBJS
+OBJS=
+
+#Name of the executable
+OBJ=
+
+all :
+
